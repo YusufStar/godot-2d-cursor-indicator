@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://ce23e0017jwpq"]
+
+[ext_resource type="Texture2D" uid="uid://d0pv7c28nu5kb" path="res://assets/tools-n-meterial-items.png" id="1_2pf7x"]
+[ext_resource type="Script" path="res://item animation/rigid_body_2d.gd" id="1_m4gij"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sy5v8"]
+atlas = ExtResource("1_2pf7x")
+region = Rect2(33.5102, 16, 14.4898, 16.1899)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jnnyq"]
+radius = 8.0
+height = 16.0
+
+[node name="RigidBody2D" type="RigidBody2D"]
+script = ExtResource("1_m4gij")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_sy5v8")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_jnnyq")

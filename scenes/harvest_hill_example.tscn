@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://cnjbyjqw23trq"]
+[gd_scene load_steps=23 format=4 uid="uid://cnjbyjqw23trq"]
 
 [ext_resource type="PackedScene" uid="uid://csv8m50kp3gk4" path="res://addons/sprout_lands_tilemap/base/scenes/sprout_lands_tile_map.tscn" id="1_tpbjb"]
 [ext_resource type="Texture2D" uid="uid://bngfh7nslvij1" path="res://addons/sprout_lands_tilemap/assets/Tilesets/Grass.png" id="2_0hxa7"]
@@ -10,7 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://b3846xma3tu8x" path="res://addons/sprout_lands_tilemap/assets/Objects/Basic Furniture.png" id="8_nrpxe"]
 [ext_resource type="Texture2D" uid="uid://bif0n5c12bwrh" path="res://addons/sprout_lands_tilemap/assets/Tilesets/Water.png" id="9_0jibv"]
 [ext_resource type="Texture2D" uid="uid://bkmnb6mm8tpyu" path="res://addons/sprout_lands_tilemap/assets/Tilesets/Wooden House.png" id="10_cp7no"]
-[ext_resource type="PackedScene" uid="uid://b16w0xfpjouyt" path="res://cursor_indicator.tscn" id="11_byar3"]
+[ext_resource type="PackedScene" uid="uid://b16w0xfpjouyt" path="res://cursor indicator/cursor_indicator.tscn" id="11_byar3"]
+[ext_resource type="PackedScene" uid="uid://ce23e0017jwpq" path="res://item animation/item_with_anim.tscn" id="12_jjxgm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2v0he"]
 texture = ExtResource("2_0hxa7")
@@ -1337,7 +1338,9 @@ tile_map_data = PackedByteArray("AAABAEUACAAEAAAAAAABAEYACAAEAAEAAAABAEcACAAEAAI
 tile_set = SubResource("TileSet_ckcx6")
 
 [node name="CursorIndicator" parent="." index="8" node_paths=PackedStringArray("tilemap_dual") instance=ExtResource("11_byar3")]
+position = Vector2(552, 276)
 tilemap_dual = NodePath("../Grass")
+item_scene = ExtResource("12_jjxgm")
 
 [node name="Camera2D" type="Camera2D" parent="." index="9"]
 position = Vector2(544, 375)
